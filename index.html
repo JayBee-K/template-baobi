@@ -17,36 +17,270 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
 	      rel="stylesheet">
-
 
 	<link rel="icon" href="/assets/images/favicon.png">
 	<link rel="apple-touch-icon" href="/assets/images/favicon.png">
 	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
-	<link rel="stylesheet" href="./assets/plugins/jquery.fancybox.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
 	<link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
 	<link rel="stylesheet" href="./assets/css/base.css">
 
 	<style>
         :root {
-            --primary-color: #BE1E2D;
-            --primary-hover: #a41926;
-            --primary-rgb: 218, 36, 25;
+            --primary-color: #026544;
+            --primary-hover: #008B5D;
+            --primary-rgb: 2, 101, 68;
 
-            --secondary-color: #1B4788;
-            --secondary-hover: #2357a4;
-            --secondary-rgb: 12, 95, 166;
+            --secondary-color: #BF333D;
+            --secondary-hover: #93222a;
+            --secondary-rgb: 191, 51, 61;
         }
 	</style>
 </head>
 <body>
 
 <div id="header" class="header">
+	<div class="header-top text-white d-flex align-items-center">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-5">
+					<div class="header-contact text-white d-flex align-items-center">
+						<div class="header-contact_item">
+							<a href=""
+							   class="d-inline-flex align-items-center justify-content-center align-middle header-contact_item--link">
+								<span class="rounded-circle d-flex align-items-center justify-content-center header-contact_item--icon">
+									<i class="fas fa-envelope"></i>
+								</span>
+								<span class="header-contact_item--text">
+									Email: example@gmail.com
+								</span>
+							</a>
+						</div>
+						<div class="header-contact_item">
+							<a href=""
+							   class="d-inline-flex align-items-center justify-content-center align-middle header-contact_item--link">
+								<span class="rounded-circle d-flex align-items-center justify-content-center header-contact_item--icon">
+									<i class="fas fa-phone-alt"></i>
+								</span>
+								<span class="header-contact_item--text">
+									Hotline: 0123.456.789
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-2">
+					<div class="header-logo">
+						<a href="" class="d-inline-flex align-middle">
+							<a href="" class="d-inline-flex">
+								<img src="./assets/images/logo-white.png" class="img-fluid" alt="">
+							</a>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-5">
+					<div class="d-flex align-items-center justify-content-end">
+						<div class="header-contact text-white d-flex align-items-center">
+							<div class="header-contact_item">
+								<a href="https://goo.gl/maps/8tbvwqxEZzLtRSJa7"
+								   target="_blank"
+								   class="d-inline-flex align-items-center justify-content-center align-middle header-contact_item--link">
+									<span class="rounded-circle d-flex align-items-center justify-content-center header-contact_item--icon">
+										<i class="fas fa-map-marker-alt"></i>
+									</span>
+									<span class="header-contact_item--text">
+										Địa chỉ trên Google Map
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="header-language">
+							<div class="dropdown header-language_dropdown">
+								<button class="btn btn-dropdown" type="button" id="dropdownLanguage"
+								        data-bs-toggle="dropdown">
+									<i class="fas fa-globe"></i>
+									<span class="ps-1">Tiếng Việt</span>
+								</button>
+								<div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownLanguage">
+									<a class="dropdown-item active" href="#">Tiếng Việt </a>
+									<a class="dropdown-item" href="#">English</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-main">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="header-navigation d-flex align-items-center justify-content-center">
+						<ul class="list-unstyled mb-0">
+							<li>
+								<a href="">
+									Trang chủ
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Về chúng tôi
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Vỏ hộp thuốc
+									<i class="fal fa-angle-down"></i>
+								</a>
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="">
+											Vỏ mềm
+										</a>
+									</li>
+									<li>
+										<a href="">
+											Vỏ âm dương
+										</a>
+									</li>
+									<li>
+										<a href="">
+											Vỏ caton lạnh
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="">
+									Bao bì
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Hộp quà tặng
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Lì xì & Lịch Tết
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Tin tức
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Liên hệ
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+
 <div id="main" class="main">
+	<div class="section-hero">
+		<div class="hero-main" id="slider-hero">
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="" class="d-inline-flex align-middle">
+							<img src="./assets/images/banner/1-2048x911.webp" class="img-fluid" alt="">
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="" class="d-inline-flex align-middle">
+							<img src="./assets/images/banner/2-2048x911.webp" class="img-fluid" alt="">
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="" class="d-inline-flex align-middle">
+							<img src="./assets/images/banner/3-2048x911.webp" class="img-fluid" alt="">
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="" class="d-inline-flex align-middle">
+							<img src="./assets/images/banner/4-2048x911.webp" class="img-fluid" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="hero-button_prev"><i class="far fa-long-arrow-left"></i></div>
+			<div class="hero-button_next"><i class="far fa-long-arrow-right"></i></div>
+		</div>
+	</div>
+	<div class="section-intro position-relative overflow-hidden zi-1 section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-lg-6 order-2 order-lg-1">
+					<div class="intro-media">
+						<div class="intro-media_item intro-media_item--first">
+							<img src="./assets/images/intro/nha-may-san-xuat-bao-bi-cap-1-pga.jpg" class="img-fluid"
+							     alt="">
+						</div>
+						<div class="intro-media_item intro-media_item--second">
+							<img src="./assets/images/intro/video-du-an-fda-1.jpg" class="img-fluid" alt="">
+						</div>
+						<div class="intro-media_item intro-media_item--third">
+							<img src="./assets/images/intro/pattern-border.jpg" class="img-fluid" alt="">
+						</div>
+						<div class="intro-experience">
+							<div class="intro-experience_inner d-flex align-items-center">
+								<div class="intro-experience_year flex-shrink-0">5</div>
+								<div class="intro-experience_text flex-grow-1 ps-2">
+									Năm <br> Kinh Nghiệm
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-6 order-1 order-lg-2 mb-5 mb-lg-0">
+					<div class="d-flex flex-column h-100">
+						<div class="section-heading">
+							<div class="section-heading_decor">
+								Về chúng tôi
+							</div>
+							<div class="section-heading_title">
+								In Ấn Bao Bì Hàng Đầu Việt Nam
+							</div>
+						</div>
+						<div class="intro-desc">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque corporis dicta
+								dignissimos doloremque harum id, illum labore necessitatibus odio odit, pariatur porro
+								possimus qui reiciendis repudiandae veritatis voluptas. Ab beatae commodi cupiditate
+								debitis esse facere magnam molestiae necessitatibus neque perferendis possimus,
+								provident quidem quo quos similique, sunt unde. Consequuntur, facere?
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laboriosam nemo
+								reprehenderit rerum. Aliquid commodi cupiditate, deserunt eaque in inventore iusto modi
+								mollitia nisi nostrum odit quidem quos sapiente tempore vero! A consequatur deleniti ea
+								nulla perferendis qui, ratione voluptatum!
+							</p>
+						</div>
+						<div class="intro-button mt-5">
+							<a href="" class="button-theme button-primary">
+								<span class="position-relative zi-3">
+									Liên hệ với chúng tôi
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <footer id="footer" class="footer">
