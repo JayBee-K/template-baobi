@@ -3,7 +3,7 @@
 	let windowWidth = $(window).width();
 
 	const sliderHero = () => {
-		if ($('#slider-hero').length > 0) {
+		if ($('#slider-hero .swiper').length > 0) {
 			new Swiper('#slider-hero .swiper', {
 				slidesPerView: 1,
 				speed: 350,
@@ -19,8 +19,36 @@
 		}
 	}
 
+	const sliderFeedback = () => {
+		if ($('#slider-feedback .swiper').length) {
+			new Swiper('#slider-feedback .swiper', {
+				slidesPerView: 1.5,
+				spaceBetween: 30,
+				speeds: 750,
+				pagination: {
+					el: '#slider-feedback .feedback-pagination',
+					type: 'bullets',
+					bulletClass: 'custom-bullet',
+					clickable: true,
+				},
+				breakpoints: {
+					576: {
+						slidesPerView: 2.5
+					},
+					992: {
+						slidesPerView: 3.5
+					},
+					1200: {
+						slidesPerView: 4
+					}
+				}
+			});
+		}
+	}
+
 	$(function () {
 		$(window).resize(() => windowWidth = $(window).width());
 		sliderHero();
+		sliderFeedback();
 	});
 })(jQuery);
