@@ -46,9 +46,34 @@
 		}
 	}
 
+	const sliderPartner = () => {
+		if ($('#slider-partner .swiper').length) {
+			new Swiper('#slider-partner .swiper', {
+				slidesPerView: 1.5,
+				spaceBetween: 15,
+				speeds: 750,
+				autoplay: {
+					delay: 4000,
+				},
+				breakpoints: {
+					576: {
+						slidesPerView: 2.5
+					},
+					992: {
+						slidesPerView: 3.5
+					},
+					1200: {
+						slidesPerView: 5
+					}
+				}
+			});
+		}
+	}
+
 	$(function () {
 		$(window).resize(() => windowWidth = $(window).width());
 		sliderHero();
 		sliderFeedback();
+		sliderPartner();
 	});
 })(jQuery);
