@@ -108,12 +108,9 @@
 				slidesPerView: 4,
 				breakpoints: {
 					320: {
-						slidesPerView: 1.5,
-					},
-					600: {
 						slidesPerView: 2.5,
 					},
-					991: {
+					600: {
 						slidesPerView: 3.5,
 					},
 					1199: {
@@ -158,6 +155,16 @@
 		});
 	}
 
+	const handleFrm = () => {
+		$('#formTemp').submit(function () {
+			let form = $(this);
+			if (!form[0].checkValidity()) {
+				form.addClass('was-validated');
+			}
+			return false;
+		});
+	}
+
 	$(function () {
 		$(window).resize(() => windowWidth = $(window).width());
 		sliderHero();
@@ -166,5 +173,6 @@
 		handleInitFancyBoxArticle();
 		handleInitFancyBoxProduct();
 		handleSlideProduct();
+		handleFrm();
 	});
 })(jQuery);
