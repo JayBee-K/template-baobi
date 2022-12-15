@@ -2,6 +2,35 @@
 	'use strict';
 	let windowWidth = $(window).width();
 
+	const handleNavigationMobile = () => {
+		if (windowWidth < 992) {
+			if ($("#header .header-navigation > ul > li > ul").length) {
+				$("#header .header-navigation").attr('id', 'hasMenu');
+				$("#header .header-navigation > ul > li > ul").each(function (index) {
+					$(this).prev().attr({
+						"href": "#subMenu" + index, "data-bs-toggle": "collapse"
+					});
+					$(this).attr({
+						"id": "subMenu" + index, "class": "collapse list-unstyled mb-0", "data-bs-parent": "#hasMenu"
+					});
+				})
+			}
+
+			$('#call-navigation').click(function () {
+				if (!$('body').hasClass('is-navigation')) {
+					$('body').addClass('is-navigation');
+				} else {
+					$("#header .header-navigation > ul > li > .navigation-sub").collapse('hide');
+					$('body').removeClass('is-navigation');
+				}
+			});
+
+			$('#close-navigation, #header-overlay').click(function () {
+				$('body').removeClass('is-navigation');
+			});
+		}
+	}
+
 	const sliderHero = () => {
 		if ($('#slider-hero .swiper').length > 0) {
 			new Swiper('#slider-hero .swiper', {
@@ -56,7 +85,7 @@
 					delay: 4000,
 				},
 				breakpoints: {
-					576: {
+					375: {
 						slidesPerView: 2.5
 					},
 					992: {
@@ -167,6 +196,7 @@
 
 	$(function () {
 		$(window).resize(() => windowWidth = $(window).width());
+		handleNavigationMobile();
 		sliderHero();
 		sliderFeedback();
 		sliderPartner();
