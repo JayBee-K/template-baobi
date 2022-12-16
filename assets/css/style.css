@@ -156,7 +156,7 @@
     display: inline-block;
     width: 100px;
     height: 8px;
-    background: url(/assets/images/pattern.png) 100% 100% / 170% no-repeat;
+    background: url(../images/pattern.png) 100% 100% / 170% no-repeat;
     margin-top: -3px
 }
 
