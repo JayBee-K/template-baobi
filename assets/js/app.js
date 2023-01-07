@@ -48,37 +48,9 @@
 		}
 	}
 
-	const sliderCompany = () => {
-		if ($('#slider-company .swiper').length) {
-			new Swiper('#slider-company .swiper', {
-				slidesPerView: 1.5,
-				spaceBetween: 15,
-				speeds: 750,
-				autoplay: {
-					delay: 4000,
-				},
-				navigation: {
-					nextEl: '#slider-company .button-next',
-					prevEl: '#slider-company .button-prev',
-				},
-				breakpoints: {
-					375: {
-						slidesPerView: 2.5
-					},
-					992: {
-						slidesPerView: 3.5
-					},
-					1200: {
-						slidesPerView: 5
-					}
-				}
-			});
-		}
-	}
-
 	const sliderProject = () => {
-		if ($('#slider-project .swiper').length) {
-			new Swiper('#slider-project .swiper', {
+		if ($('#slider-gallery .swiper').length) {
+			new Swiper('#slider-gallery .swiper', {
 				slidesPerView: 1.5,
 				spaceBetween: 15,
 				speeds: 750,
@@ -86,8 +58,8 @@
 					delay: 4000,
 				},
 				navigation: {
-					nextEl: '#slider-project .button-next',
-					prevEl: '#slider-project .button-prev',
+					nextEl: '#slider-gallery .button-next',
+					prevEl: '#slider-gallery .button-prev',
 				},
 				breakpoints: {
 					375: {
@@ -227,7 +199,6 @@
 		handleNavigationMobile();
 		sliderHero();
 		sliderPartner();
-		sliderCompany();
 		sliderProject();
 		handleInitFancyBoxArticle();
 		handleInitFancyBoxProduct();
