@@ -1328,6 +1328,12 @@
 	}
 }
 
+.article-detail .article-detail_title {
+	font-size: 2.2em;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
 .article-detail .article-detail_metas .meta-list {
 	display: inline-flex;
 	align-items: center;
@@ -1415,6 +1421,14 @@
 
 
 @media screen and (max-width: 991px) {
+	.article-detail .article-detail_title {
+		text-align: center;
+		padding-top: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 1.8em;
+	}
+
 	.article-detail .article-detail_content h2,
 	.article-detail .article-detail_content h2 *,
 	.product-detail .product-detail_content h2,
