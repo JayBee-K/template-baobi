@@ -81,9 +81,9 @@
 				slidesPerView: 1.5,
 				spaceBetween: 15,
 				speeds: 750,
-				autoplay: {
+				/*autoplay: {
 					delay: 4000,
-				},
+				},*/
 				breakpoints: {
 					375: {
 						slidesPerView: 2.5
