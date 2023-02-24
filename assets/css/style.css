@@ -717,7 +717,7 @@
 
 @media screen and (max-width: 991px) {
 	.section-hero .hero-main .swiper-slide {
-		padding-top: 400px;
+		padding-top: calc(77 / 200 * 100%);
 	}
 
 	.section-hero .hero-main [class*=hero-button] {
